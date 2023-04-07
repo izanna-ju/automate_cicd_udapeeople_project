@@ -336,7 +336,7 @@ jobs:
             cd ..
             pwd
             ls -al
-            # Zip the directory
+            # zip the directory
             tar -C backend -czvf artifact.tar.gz .
 
             cd .circleci/ansible
