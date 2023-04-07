@@ -6,7 +6,8 @@ commands:
     parameters:
       # Add parameter
       workflow_id:
-         type: string   
+         type: string
+         default: ${CIRCLE_WORKFLOW_ID:0:7}    
     steps:
       - run:
           name: Destroy environments
@@ -22,7 +23,8 @@ commands:
     parameters:
       # Add parameter here
       workflow_id:
-         type: string     
+         type: string 
+         default: ${CIRCLE_WORKFLOW_ID:0:7}     
     steps:
       - run:
           name: Revert migrations
@@ -46,6 +48,7 @@ commands:
             curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
             unzip awscliv2.zip
             sudo ./aws/install
+            
   install_ansible:
     description: Install Ansible
     steps:
