@@ -48,7 +48,7 @@ commands:
             curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
             unzip awscliv2.zip
             sudo ./aws/install
-            
+
   install_ansible:
     description: Install Ansible
     steps:
@@ -213,8 +213,7 @@ jobs:
           paths:
             - project/.circleci/ansible/inventory.txt
       # Here's where you will add some code to rollback on failure
-      - destroy-environment:
-          workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}       
+      - destroy-environment     
 
   configure-infrastructure:
     docker:
@@ -249,7 +248,7 @@ jobs:
   run-migrations:
     docker:
       # Docker image here that supports NodeJS
-      - image: cimg/node:13.8.0
+      - image: circleci/node:13.8.0
     steps:
       # Checkout code from git
       - checkout
