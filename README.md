@@ -1,6 +1,3 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/izanna-ju/automate_cicd_udapeeople_project/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/izanna-ju/automate_cicd_udapeeople_project/tree/master)
-
-
 ## Give your Application Auto-Deploy Superpowers
 
 In this project, you will showcase your mastery of the following learning objectives:
