@@ -1,4 +1,4 @@
-## Give your Application Auto-Deploy Superpowers
+## Automate application deployment using CircleCI
 
 In this project, you will showcase your mastery of the following learning objectives:
 
