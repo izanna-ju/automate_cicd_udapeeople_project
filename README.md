@@ -1,94 +1,93 @@
-## Automated CI/CD Pipeline on AWS with CircleCI
+# Automated CI/CD Pipeline on AWS with CircleCI
 
+## Project Overview
 
-### Project Summary
+This project demonstrates the design and implementation of a fully automated CI/CD pipeline for deploying a full-stack cloud application to AWS.
 
-The goal of this project is to automate the entire deployment lifecycle of a full-stack cloud application, from code commit to production deployment, using modern DevOps tools and best practices.
+The objective is to automate the complete deployment lifecycle — from code commit to production release — using modern DevOps principles and industry best practices.
 
-The pipeline includes:
+Each code change triggers a pipeline that:
 
-- Continuous Integration (CI)
+- Builds and tests the application  
+- Provisions infrastructure  
+- Configures servers  
+- Deploys using a Blue/Green strategy  
+- Monitors application health  
+- Automatically rolls back on failure  
 
-- Continuous Delivery (CD)
+This implementation mirrors real-world production DevOps workflows focused on reliability, automation, and observability.
 
-- Infrastructure as Code (IaC)
+---
 
-- Automated configuration management
-
-- Blue/Green deployment strategy
-
-- Centralized monitoring and alerting
-
-- Automated rollback on failure
-
-Every change pushed to the repository triggers a fully automated pipeline that builds, provisions, deploys, verifies, and monitors the application.
+## Architecture Diagram
 
 ![CI/CD Architecture Diagram](instructions/screenshots/udapeople_app_architecture.png)
 
-### Architecture Overview
+_Architecture of the automated CI/CD pipeline with Blue/Green deployment and integrated monitoring._
 
-The deployment workflow follows this structure:
+---
 
-Code Commit → Triggers CI pipeline in CircleCI
+## 🔄 Deployment Workflow
 
-Build & Test Stage → Application is compiled and tested
+The pipeline follows this structured flow:
 
-Infrastructure Provisioning → AWS resources created via CloudFormation
+1. **Code Commit**  
+   Developer pushes code to the repository, triggering the CI pipeline.
 
-Configuration Management → Servers configured automatically with Ansible
+2. **Build & Test**  
+   Application is compiled and validated within CircleCI.
 
-Application Deployment → Blue/Green deployment strategy implemented
+3. **Infrastructure Provisioning**  
+   AWS resources are created and managed using CloudFormation.
 
-Monitoring & Validation → Prometheus surfaces errors and health metrics
+4. **Configuration Management**  
+   EC2 instances are configured automatically using Ansible playbooks.
 
-Rollback (if needed) → Pipeline reverts to last stable version
+5. **Application Deployment**  
+   Blue/Green deployment strategy ensures zero-downtime releases.
 
-This mirrors real-world production DevOps workflows.
+6. **Monitoring & Validation**  
+   Prometheus monitors system health and application metrics.
 
-### Tech Stack
+7. **Automated Rollback (If Required)**  
+   On failure detection, traffic is reverted to the last stable environment.
 
-CI/CD Platform: CircleCI
+---
 
-Cloud Provider: Amazon Web Services (AWS)
+## Technology Stack
 
-Infrastructure as Code: AWS CloudFormation
+| Category | Tools & Services |
+|----------|------------------|
+| CI/CD Platform | CircleCI |
+| Cloud Provider | Amazon Web Services (AWS) |
+| Infrastructure as Code | AWS CloudFormation |
+| Configuration Management | Ansible |
+| Monitoring & Observability | Prometheus |
+| CLI Tooling | AWS CLI |
+| Application Runtime | Node.js |
 
-Configuration Management: Ansible
+---
 
-Monitoring: Prometheus
+## Key DevOps Concepts Demonstrated
 
-CLI Tooling: AWS CLI
+### Continuous Integration & Continuous Delivery  
+Ensures consistent, repeatable, and automated releases with minimal manual intervention.
 
-Application Runtime: Node.js
+### Infrastructure as Code (IaC)  
+Cloud infrastructure is provisioned declaratively using CloudFormation templates.
 
-### Key DevOps Concepts Demonstrated
-1️⃣ Continuous Integration & Continuous Delivery
+### Blue/Green Deployment  
+Reduces deployment risk and eliminates downtime by switching traffic between environments.
 
-Automated pipeline ensures consistent, reliable releases with minimal manual intervention.
+### Configuration Management  
+Server provisioning and application setup are automated using Ansible.
 
-2️⃣ Infrastructure as Code (IaC)
+### Observability & Monitoring  
+Prometheus provides real-time visibility into application health and system metrics.
 
-Cloud resources are provisioned declaratively using CloudFormation templates.
+### Failure Handling & Rollback  
+Automated rollback mechanism preserves production stability in case of deployment issues.
 
-3️⃣ Blue/Green Deployment
+---
 
-Reduces downtime and deployment risk by switching traffic between environments.
-
-4️⃣ Configuration Management
-
-Automated server provisioning using Ansible playbooks.
-
-5️⃣ Observability & Monitoring
-
-Application health and errors are surfaced using Prometheus for fast diagnosis.
-
-6️⃣ Failure Handling & Rollback
-
-Pipeline automatically handles failures to maintain production stability.
-
-### Repository Structure
-- .circleci/        -     CI/CD pipeline configuration
-- cloudformation/   -     Infrastructure as Code templates
-- ansible/          -     Configuration management playbooks
-- backend/          -     Application source code
-- frontend/         -     Application frontend
+## 📂 Repository Structure
