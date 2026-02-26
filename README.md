@@ -6,7 +6,7 @@ As a DevOps Engineer with experience managing cloud infrastructure and deploymen
 
 ### Project Summary
 
-The goal of this project is to automate the entire deployment lifecycle of a full-stack cloud application — from code commit to production deployment — using modern DevOps tools and best practices.
+The goal of this project is to automate the entire deployment lifecycle of a full-stack cloud application, from code commit to production deployment, using modern DevOps tools and best practices.
 
 The pipeline includes:
 
