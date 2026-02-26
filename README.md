@@ -88,8 +88,8 @@ Application health and errors are surfaced using Prometheus for fast diagnosis.
 Pipeline automatically handles failures to maintain production stability.
 
 ### Repository Structure
-.circleci/            # CI/CD pipeline configuration
-cloudformation/       # Infrastructure as Code templates
-ansible/              # Configuration management playbooks
-backend/              # Application source code
-frontend/             # Application frontend
+- .circleci/            # CI/CD pipeline configuration
+- cloudformation/       # Infrastructure as Code templates
+- ansible/              # Configuration management playbooks
+- backend/              # Application source code
+- frontend/             # Application frontend
