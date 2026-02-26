@@ -1,32 +1,95 @@
-## Automate application deployment using CircleCI
+## Automated CI/CD Pipeline on AWS with CircleCI
 
-In this project, you will showcase your mastery of the following learning objectives:
+This project demonstrates my hands-on DevOps expertise in building a fully automated CI/CD pipeline for deploying a cloud-based application to AWS using Infrastructure as Code, configuration management, and production monitoring.
 
-- Explain the fundamentals and benefits of CI/CD to achieve, build, and deploy automation for cloud-based software products.
-- Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
-- Utilize a configuration management tool to accomplish deployment to cloud-based servers.
-- Surface critical server errors for diagnosis using centralized structured logging.
+As a DevOps Engineer with experience managing cloud infrastructure and deployment automation, this repository reflects how I design reliable, scalable, and observable deployment systems.
 
-![Diagram of CI/CD Pipeline we will be building.](udapeople.png)
+### Project Summary
 
-### Instructions
+The goal of this project is to automate the entire deployment lifecycle of a full-stack cloud application — from code commit to production deployment — using modern DevOps tools and best practices.
 
-* [Selling CI/CD](instructions/0-selling-cicd.md)
-* [Getting Started](instructions/1-getting-started.md)
-* [Deploying Working, Trustworthy Software](instructions/2-deploying-trustworthy-code.md)
-* [Configuration Management](instructions/3-configuration-management.md)
-* [Turn Errors into Sirens](instructions/4-turn-errors-into-sirens.md)
+The pipeline includes:
 
-### Built With
+- Continuous Integration (CI)
 
-- [Circle CI](www.circleci.com) - Cloud-based CI/CD service
-- [Amazon AWS](https://aws.amazon.com/) - Cloud services
-- [AWS CLI](https://aws.amazon.com/cli/) - Command-line tool for AWS
-- [CloudFormation](https://aws.amazon.com/cloudformation/) - Infrastrcuture as code
-- [Ansible](https://www.ansible.com/) - Configuration management tool
-- [Prometheus](https://prometheus.io/) - Monitoring tool
+- Continuous Delivery (CD)
 
+- Infrastructure as Code (IaC)
 
-### License
+- Automated configuration management
 
-[License](LICENSE.md)
+- Blue/Green deployment strategy
+
+- Centralized monitoring and alerting
+
+- Automated rollback on failure
+
+Every change pushed to the repository triggers a fully automated pipeline that builds, provisions, deploys, verifies, and monitors the application.
+
+### Architecture Overview
+
+The deployment workflow follows this structure:
+
+Code Commit → Triggers CI pipeline in CircleCI
+
+Build & Test Stage → Application is compiled and tested
+
+Infrastructure Provisioning → AWS resources created via CloudFormation
+
+Configuration Management → Servers configured automatically with Ansible
+
+Application Deployment → Blue/Green deployment strategy implemented
+
+Monitoring & Validation → Prometheus surfaces errors and health metrics
+
+Rollback (if needed) → Pipeline reverts to last stable version
+
+This mirrors real-world production DevOps workflows.
+
+### Tech Stack
+
+CI/CD Platform: CircleCI
+
+Cloud Provider: Amazon Web Services (AWS)
+
+Infrastructure as Code: AWS CloudFormation
+
+Configuration Management: Ansible
+
+Monitoring: Prometheus
+
+CLI Tooling: AWS CLI
+
+Application Runtime: Node.js
+
+### Key DevOps Concepts Demonstrated
+1️⃣ Continuous Integration & Continuous Delivery
+
+Automated pipeline ensures consistent, reliable releases with minimal manual intervention.
+
+2️⃣ Infrastructure as Code (IaC)
+
+Cloud resources are provisioned declaratively using CloudFormation templates.
+
+3️⃣ Blue/Green Deployment
+
+Reduces downtime and deployment risk by switching traffic between environments.
+
+4️⃣ Configuration Management
+
+Automated server provisioning using Ansible playbooks.
+
+5️⃣ Observability & Monitoring
+
+Application health and errors are surfaced using Prometheus for fast diagnosis.
+
+6️⃣ Failure Handling & Rollback
+
+Pipeline automatically handles failures to maintain production stability.
+
+### Repository Structure
+.circleci/            # CI/CD pipeline configuration
+cloudformation/       # Infrastructure as Code templates
+ansible/              # Configuration management playbooks
+backend/              # Application source code
+frontend/             # Application frontend
