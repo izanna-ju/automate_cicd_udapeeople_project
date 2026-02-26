@@ -1,8 +1,5 @@
 ## Automated CI/CD Pipeline on AWS with CircleCI
 
-This project demonstrates my hands-on DevOps expertise in building a fully automated CI/CD pipeline for deploying a cloud-based application to AWS using Infrastructure as Code, configuration management, and production monitoring.
-
-As a DevOps Engineer with experience managing cloud infrastructure and deployment automation, this repository reflects how I design reliable, scalable, and observable deployment systems.
 
 ### Project Summary
 
@@ -25,6 +22,8 @@ The pipeline includes:
 - Automated rollback on failure
 
 Every change pushed to the repository triggers a fully automated pipeline that builds, provisions, deploys, verifies, and monitors the application.
+
+![CI/CD Architecture Diagram](instructions/screenshots/udapeople_app_architecture.png)
 
 ### Architecture Overview
 
