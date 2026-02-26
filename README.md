@@ -27,7 +27,7 @@ _Architecture of the automated CI/CD pipeline with Blue/Green deployment and int
 
 ---
 
-## 🔄 Deployment Workflow
+## Deployment Workflow
 
 The pipeline follows this structured flow:
 
@@ -90,4 +90,9 @@ Automated rollback mechanism preserves production stability in case of deploymen
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
+- .circleci/        -  CI/CD pipeline configuration
+- cloudformation/   - Infrastructure as Code templates
+- ansible/          - Configuration management playbooks
+- backend/          - Application source code
+- frontend/         - Application frontend
